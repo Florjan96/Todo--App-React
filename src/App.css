@@ -33,14 +33,37 @@ color:azure;
 }
 
  ::placeholder{
-  padding-left: 50px;
+  padding-left: 25px;
   color: rgb(243, 240, 240);
   font-size: large;
-  font-family::Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif
+  font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif
 }
-
-
 
 :root{
   background-color: black;
+}
+
+.todos-list{
+  width: 450px;
+
+}
+
+
+.todos-list ul li {
+  color:azure;
+  
+}
+
+.incomplete{
+  text-decoration: line-through;
+}
+
+.todos-ul {
+  border:1px solid white;
+  text-decoration: none;
+  list-style-type:none;
+}
+
+.todos-ul li{
+  border-bottom: 1px solid white;
 }

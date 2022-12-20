@@ -21,9 +21,18 @@ function App() {
       </div>
       <form>
         <input type="text"  placeholder='Create a new todo . . .'/>
-        <button>Add</button>
       </form>
       </div>
+
+      <div className="todos-list">
+        <ul className='todos-ul'>
+{todos.map(todo=>(
+  <li className={todo.completed? "completed":"incomplete"}>{todo.title}</li>
+))}
+      </ul>
+      </div>
+
+
 
     </div>
   )
