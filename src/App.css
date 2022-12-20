@@ -44,8 +44,8 @@ color:azure;
 }
 
 .todos-list{
-  width: 450px;
-
+  width :500px;
+  height: 45px;
 }
 
 
@@ -59,11 +59,21 @@ color:azure;
 }
 
 .todos-ul {
-  border:1px solid white;
   text-decoration: none;
   list-style-type:none;
+  position:absolute;
+  top: 0;
+  padding-left: 515px;
+  padding-top: 280px;
+  border-radius: 20%;
 }
 
 .todos-ul li{
-  border-bottom: 1px solid white;
+  border-bottom: 1px solid rgb(176, 170, 170);
+  border-color: rgb(144, 144, 143);
+  width :500px;
+  height: 45px;
+  place-content: start;
+  background-color: rgb(46, 44, 44);
+
 }

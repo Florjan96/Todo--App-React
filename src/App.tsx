@@ -10,6 +10,15 @@ function App() {
     {id:4,title:"10 minutes meditation", completed:false}
   ])
 
+function toggleTodos(todo){
+  let todosCopy=structuredClone(todos)
+  let match =todosCopy.find(target=>target.id ===todo.id )
+  match.completed = !match.completed
+setTodos(todosCopy)
+}
+
+
+
   return (
     <div className="App">
 <div className="banner-card">
@@ -27,7 +36,10 @@ function App() {
       <div className="todos-list">
         <ul className='todos-ul'>
 {todos.map(todo=>(
-  <li className={todo.completed? "completed":"incomplete"}>{todo.title}</li>
+  <li onClick={()=>{toggleTodos(todo)}} 
+  className={todo.completed? "completed":"incomplete"}
+  
+  >{todo.title}</li>
 ))}
       </ul>
       </div>
