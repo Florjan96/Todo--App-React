@@ -17,6 +17,16 @@ function toggleTodos(todo){
 setTodos(todosCopy)
 }
 
+function createNewTodo(){
+  let newTodo={
+    id:4,
+    title:event.target.intepu.value,
+    completed:false
+  }
+  
+  let copyTodos=[...todos,newTodo]
+  setTodos(copyTodos)
+}
 
 
   return (
@@ -28,8 +38,13 @@ setTodos(todosCopy)
       <div className="banner-text">
 <h1>T  O  D  O</h1>
       </div>
-      <form>
-        <input type="text"  placeholder='Create a new todo . . .'/>
+      <form onSubmit={(event)=>{
+event.preventDefault()
+createNewTodo()
+
+
+      }}>
+        <input type="text" name="intepu"  placeholder='Create a new todo . . .'/>
       </form>
       </div>
 
@@ -39,7 +54,9 @@ setTodos(todosCopy)
   <li onClick={()=>{toggleTodos(todo)}} 
   className={todo.completed? "completed":"incomplete"}
   
-  >{todo.title}</li>
+  ><h6>{todo.title}</h6>
+  </li>
+  
 ))}
       </ul>
       </div>
