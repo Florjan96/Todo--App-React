@@ -3,7 +3,7 @@ import logo from './logo.svg'
 import './App.css'
 
 function App() {
-  const [todos, setTodos] = useState(0)
+  const [todos, setTodos] = useState([])
 
   return (
     <div className="App">
