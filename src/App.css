@@ -54,35 +54,55 @@ color:azure;
 .todos-list ul li {
   color:azure;
   padding-top: 20px;
+  
 
 }
 
 .todos-list ul li h6{
-  padding-left:20px;
-  font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  padding-right:90px;
 font-size:13px
+
 }
 
-.incomplete{
+.complete h6{
   text-decoration: line-through;
+  color:grey
+  
 }
+
 
 .todos-ul {
-  text-decoration: none;
+  /* text-decoration: none; */
   list-style-type:none;
   position:absolute;
   top: 0;
   padding-left: 515px;
   padding-top: 280px;
-  border-radius: 20%;
+  border-radius: 50px;
 }
 
 .todos-ul li{
   border-bottom: 1px solid rgb(176, 170, 170);
   border-color: rgb(144, 144, 143);
   width :500px;
-  height: 45px;
-  place-content: start;
+  height: 60px;
+  /* place-content: start; */
   background-color: rgb(46, 44, 44);
+  
+
+}
+
+.todos-ul li{
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  place-items: center;
+}
+
+.todos-ul li button{
+  width: 50px;
+  height: 50px;
+  margin-left: 200px;
+border: none;
+background: none
 
 }

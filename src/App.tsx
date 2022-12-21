@@ -28,6 +28,11 @@ function createNewTodo(){
   setTodos(copyTodos)
 }
 
+function deleteTodo(todo){
+  let fllonxa=todos.filter(target=>target.id !== todo.id)
+setTodos(fllonxa)
+}
+
 
   return (
     <div className="App">
@@ -51,10 +56,12 @@ createNewTodo()
       <div className="todos-list">
         <ul className='todos-ul'>
 {todos.map(todo=>(
-  <li onClick={()=>{toggleTodos(todo)}} 
-  className={todo.completed? "completed":"incomplete"}
-  
-  ><h6>{todo.title}</h6>
+  <li className={todo.completed? "incomplete":"complete"}>
+     <span onClick={()=>{toggleTodos(todo)}}>
+    <h6>{todo.title}</h6>
+    </span>
+
+    <button onClick={()=>{deleteTodo(todo)}}>x</button>
   </li>
   
 ))}
