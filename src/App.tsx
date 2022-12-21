@@ -21,7 +21,7 @@ function createNewTodo(){
   let newTodo={
     id:4,
     title:event.target.intepu.value,
-    completed:false
+    completed:true
   }
   
   let copyTodos=[...todos,newTodo]
