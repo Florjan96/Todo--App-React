@@ -38,6 +38,15 @@ function filterActiveTodos(){
   setTodos(activeTodos)
 }
 
+function allTodos(){
+  let allTodos=todos.filter(todo=>todo.completed===true || todo.completed===false)
+setTodos(allTodos)
+}
+
+function completedTodos(){
+  let completedTodos=todos.filter(todo=>todo.completed===false)
+  setTodos(completedTodos)
+}
 
   return (
     
@@ -74,9 +83,13 @@ createNewTodo()
   </>
 ))}
  <div className="detail">
-<h2>All</h2>
+<h2 onClick={()=>{allTodos()}}>All</h2>
+
 <h2 onClick={()=>{filterActiveTodos()}}>Active</h2>
-<h2 className="completed-o">Completed</h2>
+
+<h2 className="completed-o"
+onClick={()=>{completedTodos()}}
+>Completed</h2>
   </div>
       </ul>
       
