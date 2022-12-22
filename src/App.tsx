@@ -10,7 +10,7 @@ function App() {
     {id:4,title:"10 minutes meditation", completed:false}
   ])
 
-function toggleTodos(todo){
+function toggleTodos(todo :any){
   let todosCopy=structuredClone(todos)
   let match =todosCopy.find(target=>target.id ===todo.id )
   match.completed = !match.completed
@@ -28,13 +28,19 @@ function createNewTodo(){
   setTodos(copyTodos)
 }
 
-function deleteTodo(todo){
+function deleteTodo(todo:any){
   let fllonxa=todos.filter(target=>target.id !== todo.id)
 setTodos(fllonxa)
 }
 
+function filterActiveTodos(){
+  let activeTodos=todos.filter(todo=>todo.completed ===true)
+  setTodos(activeTodos)
+}
+
 
   return (
+    
     <div className="App">
 <div className="banner-card">
   
@@ -56,6 +62,7 @@ createNewTodo()
       <div className="todos-list">
         <ul className='todos-ul'>
 {todos.map(todo=>(
+  <>
   <li className={todo.completed? "incomplete":"complete"}>
      <span onClick={()=>{toggleTodos(todo)}}>
     <h6>{todo.title}</h6>
@@ -63,9 +70,16 @@ createNewTodo()
 
     <button onClick={()=>{deleteTodo(todo)}}>x</button>
   </li>
-  
+ 
+  </>
 ))}
+ <div className="detail">
+<h2>All</h2>
+<h2 onClick={()=>{filterActiveTodos()}}>Active</h2>
+<h2 className="completed-o">Completed</h2>
+  </div>
       </ul>
+      
       </div>
 
 

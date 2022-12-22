@@ -60,7 +60,8 @@ color:azure;
 
 .todos-list ul li h6{
   padding-right:90px;
-font-size:13px
+font-size:13px;
+margin-top: 20px;
 
 }
 
@@ -85,7 +86,7 @@ font-size:13px
   border-bottom: 1px solid rgb(176, 170, 170);
   border-color: rgb(144, 144, 143);
   width :500px;
-  height: 60px;
+  height: 50px;
   /* place-content: start; */
   background-color: rgb(46, 44, 44);
   
@@ -108,3 +109,19 @@ background: none;
 font-size:20px;
 cursor:pointer;
 }
+
+.detail{
+  color:white;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  background-color: rgb(46, 44, 44);
+place-items: center;
+}
+
+.detail h2{
+  font-size: 20px;
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+cursor: pointer;
+}
+
+ 
